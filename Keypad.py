@@ -5,27 +5,28 @@ from enum import IntEnum
 
 # CONSTANTS
 class SpecialKeys(IntEnum):
-	BACKSPACE = 0x4a
-	NEXT = 0x4e
-	ENTER = 0x1c
-	SPACE = 0x52
-	CAPS = 0x53
-	NUM_LOCK = 0x45
+	BACKSPACE = 0x4a  # NUMPAD DASH
+	NEXT = 0x4e  # NUMPAD ADD
+	ENTER = 0x1c  # NUMPAD ENTER
+	SPACE = 0x52  # NUMPAD 0
+	CAPS = 0x53  # NUMPAD DOT
+	NUM_LOCK = 0x45  # NUM LOCK
 
 
-__special_keys = [0x4a, 0x4e, 0x1c, 0x52, 0x53]
+__special_keys = [0x4a, 0x4e, 0x1c, 0x53]
 __keypad = {
-	0x47: [',', '.'],  # NUMPAD 7
-	0x48: ['A', 'B', 'C'],  # NUMPAD 8
-	0x49: ['D', 'E', 'F'],  # NUMPAD 9
-	0x4b: ['G', 'H', 'I'],  # NUMPAD 4
-	0x4c: ['J', 'K', 'L'],  # NUMPAD 5
-	0x4d: ['M', 'N', 'O'],  # NUMPAD 6
-	0x4f: ['P', 'Q', 'R', 'S'],  # NUMPAD 1
-	0x50: ['T', 'U', 'V'],  # NUMPAD 2
-	0x51: ['W', 'X', 'Y', 'Z'],  # NUMPAD 3
-	0x35: ['\'', '"'],
-	0x37: ['!', '?']
+	0x47: [',', '.', ':', ';', '…'],  # NUMPAD 7 (custom)
+	0x48: ['A', 'B', 'C', '2', 'à', 'â', 'æ', 'ç'],  # NUMPAD 8 (Nokia 1100)
+	0x49: ['D', 'E', 'F', '3', 'é', 'è', 'ê', '€'],  # NUMPAD 9 (Nokia 1100)
+	0x4b: ['G', 'H', 'I', '4', 'ï', 'î', 'í', 'ì'],  # NUMPAD 4 (Nokia 1100)
+	0x4c: ['J', 'K', 'L', '5'],  # NUMPAD 5 (Nokia 1100)
+	0x4d: ['M', 'N', 'O', '6','ô','œ','ö','ñ','ó','ò'],  # NUMPAD 6 (Nokia 1100)
+	0x4f: ['P', 'Q', 'R', 'S', '7','$'],  # NUMPAD 1 (Nokia 1100)
+	0x50: ['T', 'U', 'V', '8','û','ù','ü','ú'],  # NUMPAD 2 (Nokia 1100)
+	0x51: ['W', 'X', 'Y', 'Z'],  # NUMPAD 3 (Nokia 1100)
+	0x35: ['\'', '"', '/', '<', '>', '«', '»'],  # NUMPAD / (custom)
+	0x37: ['!', '?', '¡', '¿'],  # NUMPAD * (custom)
+	0x52: [' ', '0', '@', '°']  # NUMPAD 0 (custom)
 }
 __time_cooldown = 1
 __time_last_press = 0
@@ -93,11 +94,13 @@ def handle_event(callback):
 			if __current["code"] is not None:
 				write()
 			keyboard.send(0x1c)
+		'''
 		# Space
 		if callback.scan_code == SpecialKeys.SPACE:
 			if __current["code"] is not None:
 				write()
 			keyboard.send(0x39)
+		'''
 		# ToDo: Numlock
 		return
 
