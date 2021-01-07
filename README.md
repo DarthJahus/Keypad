@@ -13,7 +13,7 @@ While this application is running, your keystrokes are caught and converted. The
 
 * Tapping on one key will cycle you through the possible values. You validate either by using another key or by pressing NEXT/SPACE/ENTER (see the visual).
 
-* Switch CAPS LOCK by pressing the CAPS button (no visual feedback for now).
+* Switch `CAPS LOCK` by pressing the `CAPS` button (no visual feedback for now).
 
 ## Feedback and improvement
 
@@ -22,7 +22,7 @@ Got ideas to improve the project? Open an issue on this repository and we'll tal
 Wanna contribute? You're very welcome. Here you'll find some ToDo and ideas.
 
 ToDo:
-- [ ] Add special characters and numbers;
+- [x] Add special characters and numbers;
 - [ ] Add an activation/deactivation key;
 - [ ] Visual feedback for `CAPS LOCK` and `NUM LOCK`;
 - [ ] (?) Show characters while cycling through possible states.

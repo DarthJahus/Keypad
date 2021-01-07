@@ -15,7 +15,7 @@ class SpecialKeys(IntEnum):
 
 __special_keys = [0x4a, 0x4e, 0x1c, 0x53]
 __keypad = {
-	0x47: [',', '.', ':', ';', '…'],  # NUMPAD 7 (custom)
+	0x47: [',', '.', '1', ':', ';', '…'],  # NUMPAD 7 (custom)
 	0x48: ['A', 'B', 'C', '2', 'à', 'â', 'æ', 'ç'],  # NUMPAD 8 (Nokia 1100)
 	0x49: ['D', 'E', 'F', '3', 'é', 'è', 'ê', '€'],  # NUMPAD 9 (Nokia 1100)
 	0x4b: ['G', 'H', 'I', '4', 'ï', 'î', 'í', 'ì'],  # NUMPAD 4 (Nokia 1100)
