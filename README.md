@@ -1,7 +1,7 @@
 *This program converts your keyboard numeric pad into a telephone-style keypad.*
 
 ## Layout
-The application is layout agnostic. You can use it either you're with QWERTY, AZERTY, Dvorak or any other.
+The application is layout agnostic. You can use it whether you're with QWERTY, AZERTY, Dvorak or any other.
 
 Here is the actual in-app layout:
 
